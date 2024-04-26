@@ -15,10 +15,10 @@ def save_raw_data(configuration, it_number, djensemble, database_file):
                     configuration,
                     window, 
                     input_data, \
-                    error, 
-                    time, 
+                    error REAL, 
+                    time REAL, 
                     ensemble, 
-                    n_tiles,
+                    n_tiles REAL,
                     CONSTRAINT exp3_p_key PRIMARY KEY (iteration, configuration, window)
             )
         """)
@@ -33,7 +33,7 @@ def save_raw_data(configuration, it_number, djensemble, database_file):
             query = f"""
                     INSERT INTO exp VALUES ( 
                     {it_number}, 
-                    '{configuration["config"]}', 
+                    '{configuration["config"].replace("'", "*")}',
                     {window+1}, 
                     '{djensemble.get_parameters()}',
                     '{djensemble.error_history()[window]}',                    
@@ -125,9 +125,9 @@ def save_average_all_iterations(database_file):
         CREATE TABLE exp_condensed(
                             iteration, 
                             configuration, 
-                            average_error, 
-                            average_time, 
-                            average_n_tiles,
+                            average_error REAL, 
+                            average_time REAL, 
+                            average_n_tiles REAL,
                             sum_winner_error,
                             sum_winner_time,
                             sum_winner_n_tiles                    

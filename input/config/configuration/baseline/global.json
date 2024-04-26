@@ -1,0 +1,19 @@
+{
+    "label": "global",
+    "window_size": 10,
+    "window_type": "tumbling",
+    "time_start": 0,
+    "time_end": 1460,                            
+    "clustering":{                
+        "embedding_method": "parcorr6",
+        "type": "static",
+        "cluster_query_window": true,
+        "pre_clustering_window_size": 10
+    },
+    "use_random_allocation": false,
+    "use_average_ensemble": false,
+    "tiling": {
+        "strategy": "single_tile",
+        "min_purity_rate": 0.00
+    }
+}

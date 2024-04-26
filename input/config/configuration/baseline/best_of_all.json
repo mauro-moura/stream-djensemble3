@@ -1,0 +1,18 @@
+{
+    "label": "best_of_all",
+    "window_size": 10,
+    "window_type": "tumbling",
+    "time_start": 0,
+    "time_end": 1460,                            
+    "clustering":{                
+        "embedding_method": "parcorr6",
+        "type": "static",
+        "cluster_query_window": true,
+        "pre_clustering_window_size": 10
+    },
+    "best_of_all_models": true,
+    "tiling": {
+        "strategy": "single_tile",
+        "min_purity_rate": 0.00
+    }
+}

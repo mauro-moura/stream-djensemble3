@@ -1,10 +1,8 @@
 {   
-    "queries": "input/config/queries.json",
+    "queries": "input/config/queries/queries-2015.json",
     "skip_list": [], 
-    "database_file": "exp3-query-2-baseline.db",
+    "database_file": "exp3v2-baseline.db",
     "global_configuration": {
-        "use_random_allocation": false,
-        "use_average_ensemble": false,
         "data_source": {
             "dataset": "input/data/CFSR-2015.nc",
             "target_attribute": "TMP_L100",
@@ -14,7 +12,7 @@
                 "lon_min": 0,
                 "lon_max": 153
             },
-            "time_range": [0, 30],
+            "time_range": [0, 1460],
             "compacting_factor": 1
         },
         "models": {
@@ -27,12 +25,7 @@
         }    
     },    
     "djensemble" : {
-        "A": "input/config/configuration/A.json",
-        "B": "input/config/configuration/B.json",
-        "C": "input/config/configuration/C.json",
-        "D": "input/config/configuration/D.json",
-        "E": "input/config/configuration/E.json",
-        "F": "input/config/configuration/F.json"
+        "global": "input/config/configuration/baseline/global.json"        
     }    
 }        
 

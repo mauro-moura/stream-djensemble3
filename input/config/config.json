@@ -1,5 +1,5 @@
 {   
-    "queries": "input/config/queries-2015.json",
+    "queries": "input/config/queries/queries-2015.json",
     "skip_list": [], 
     "database_file": "exp.db",
     "global_configuration": {
