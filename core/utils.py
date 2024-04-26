@@ -3,6 +3,7 @@ from os.path import exists
 import fnmatch
 import time
 import logging
+from pathlib import Path
 
 logger = logging.getLogger(__name__)
 
@@ -43,6 +44,9 @@ def file_exists(path_to_file):
 
 def get_file_name_from_path(full_path_to_file: str):
     return full_path_to_file.split("/")[-1]
+
+def get_file_name_without_extension(file_name):    
+    return Path(file_name).stem
 
 def print_array(array_list):
     from matplotlib import pyplot as plt
