@@ -1,8 +1,8 @@
 import numpy as np
 import core.utils as ut
-from core.dataset_manager import DatasetManager
+from core.data.dataset_manager import DatasetManager
 from clustering.clustering import cluster_dataset, expand_tile
-from clustering.clustering import create_yolo_tiling, categorize_dataset
+from core.tiling.tiling import create_yolo_tiling, categorize_dataset
 
 def test_1():
     tiling = np.full((5, 5), -1)

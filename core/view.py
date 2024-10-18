@@ -3,7 +3,7 @@ import matplotlib
 from PIL import Image
 from matplotlib import pyplot as plt
 from matplotlib.pyplot import figure
-#from core.utils import create_directory_if_not_exists
+from core.utils import create_directory_if_not_exists
 import seaborn as sns
 
 def print_array_screen(array_list, title_list = None, cmap_list=None):

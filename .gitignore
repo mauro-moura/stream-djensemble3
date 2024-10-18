@@ -1,0 +1,7 @@
+
+__pycache__
+
+input/data/*
+!input/data/.gitkeep
+
+test.py
